@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mobile {
+    width: 340px;
+    height: 500px;
+    background: red;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.menu {
+    height: 50px;
+    width: 100%;
+    background: #0284A8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu-button {
+    height: 30px;
+    width: 50px;
+    background: #0284A8;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: rgba(255, 0, 0, 0)
+}
+
+.itemMenu {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 2px;
+    transition: background 0.5s ease-in;
+}
+
+.itemMenu-open {
+    background: #02547D;
+}
+
+.mobile__ui {
+    width: 100%;
+    height: 100%;
+    background: #02547D;
+    position: absolute;
+}
+
+.mobile__navigation {
+    width: 100%;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.openMenu {
+    opacity: 1;
+}
+
+.mobile__navigation-item {
+    color: #02547D;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: clip-path 0.1s ease-in-out 0.2s;
+    clip-path: polygon(50% 0, 50% 0%, 50% 100%, 50% 100%);
+}
+
+.openMenu-item {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.clipCircle {
+    width: 1200px;
+    height: 1200px;
+    transition: clip-path 0.4s ease-in-out;
+    clip-path: circle(0% at 3% 50%);
+    background: white;
+    position: absolute;
+}
+
+.clipcircle-open {
+    clip-path: circle(100% at 3% 50%);
+}
