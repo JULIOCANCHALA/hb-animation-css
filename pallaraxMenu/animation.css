@@ -1,0 +1,79 @@
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+.mobile{
+    width:370px;
+    height: 500px;
+    background: red;
+    position: relative;
+    overflow: hidden;
+}
+.mobile__left{
+    width: 200px;
+    height: 100%;
+    background: #F25944;
+    position: absolute;
+    left: -200px;
+}
+.mobile__right{
+    width: 100%;
+    height: 100%;
+    background: #F2F0F0;
+    position: absolute;
+}
+.menu{
+    height: 50px;
+    width: 100%;
+    background: #243752;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+  .menu-button{
+    height: 30px;
+    width: 45px;
+    background: #0A6187;
+    margin-left: 10px;
+    cursor: pointer; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 0px;
+    border-radius: 3px;
+  }
+
+.icon__item{
+    height: 3px;
+    width: 30px;
+    background: white;
+    margin: 2px;
+    border-radius: 1px;
+    opacity: 1;
+    transform: translateY(0) rotateZ(0deg);
+    transition: transform 0.3s ease-in-out 0.5s, opacity 0.3s ease-in-out 0.5s;
+}
+
+.icon__exit-up{
+    transform: translateY(7px) rotateZ(45deg);
+}
+.icon__exit-middle{
+    opacity: 0;
+}
+
+.icon__exit-down{
+    transform: translateY(-7px) rotateZ(-45deg);
+}
+
+  .mobileItem{
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+  }
+
+  .openMenu{
+    transform: translateX(200px);
+}
